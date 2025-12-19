@@ -1,4 +1,4 @@
-# Abosamra's GTA Tool
+# Crest Companion GTA Tool
 
 A tool to assist with GTA V Cayo Perico fingerprint solving, casino keypad cracking and the No Save Heist replay glitch.
 

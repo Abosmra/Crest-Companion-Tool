@@ -97,8 +97,9 @@ def toggle_firewall_rule() -> None:
 
 def play_sound(filename: str) -> None:
 
-    repo_root = Path(__file__).resolve().parents[1]
-    sound_path = repo_root / 'assets' / filename
+    # Support running from source and from a PyInstaller onefile bundle.
+    base_dir = Path(getattr(sys, '_MEIPASS', Path(__file__).resolve().parents[1]))
+    sound_path = base_dir / 'assets' / filename
     if not sound_path.exists():
         return
 

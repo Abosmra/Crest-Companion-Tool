@@ -10,6 +10,11 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+**Compile the code yourself**
+```bash
+pyinstaller --onefile --uac-admin --icon=icon.ico --name "Crest Companion" --add-data "assets;assets" main.py
+```
+
 **Run the app**
 
 - Launch GTA V and ensure the game window is visible (windowed or borderless works best).

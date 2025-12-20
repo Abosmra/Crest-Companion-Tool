@@ -1,6 +1,6 @@
 # Crest Companion GTA Tool
 
-A tool to assist with GTA V Cayo Perico fingerprint solving, casino keypad cracking and the No Save Heist replay glitch.
+A tool to assist with GTA V Cayo Perico fingerprint solving, Diamond Casino fingerprint solving and the No Save Heist replay glitch.
 
 **Setup**
 
@@ -14,10 +14,9 @@ pip install -r requirements.txt
 
 - Launch GTA V and ensure the game window is visible (windowed or borderless works best).
 -- Hotkeys (while the app is running):
-  - **F5**: Casino keypad helper
   - **F6**: Casino fingerprint helper
   - **F7**: Cayo fingerprint helper
-  - **F8**: Toggle Block/Unblock IP (no-save)
+  - **F8**: Toggle No Save
   - **End**: Exit
 
 

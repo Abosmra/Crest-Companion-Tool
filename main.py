@@ -2,10 +2,10 @@ import sys
 import time
 import pynput
 import ctypes
+import msvcrt
 from threading import Thread
 from hacks import cayofingerprint
 from hacks import casinofingerprint
-from hacks import casinokeypad
 from hacks import nosave
 
 
@@ -38,21 +38,25 @@ def is_admin() -> bool:
         return False
 
 
-def ensure_elevated_console():
-    if is_admin() or "--elevated" in sys.argv:
-        return
-    script = sys.argv[0]
-    args = " ".join(a for a in sys.argv[1:] if a != "--elevated")
-    params = f'"{script}" --elevated {args}'.strip()
+def ensureRunningAsAdminOrExit() -> None:
+    # Initial startup check: if not running elevated, notify and wait for any key to exit.
     try:
-        res = ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, params, None, 1)
-        if int(res) <= 32:
-            print(f"[!] Elevation failed (ShellExecuteW returned {res}). Command: {sys.executable} {params}")
-    except Exception as e:
-        print(f"[!] Elevation attempt raised: {e}. Cmd: {sys.executable} {params}")
-    sys.exit(0)
+        if is_admin():
+            return
+    except Exception:
+        pass
+    print("[!] This application is not running as Administrator. Please run it as Administrator.")
+    print("Press any key to exit...")
+    try:
+        msvcrt.getch()
+    except Exception:
+        try:
+            input()
+        except Exception:
+            pass
+    sys.exit(1)
 
- 
+
 
 def print_banner():
     print('''
@@ -79,19 +83,16 @@ Made by Abosamra
     
 def printHotkeys():
     print('[*] Hotkeys:')
-    print('    F5  - Casino keypad helper')
     print('    F6  - Casino fingerprint helper')
     print('    F7  - Cayo fingerprint helper')
-    print('    F8  - Toggle Block/Unblock IP (no-save)')
+    print('    F8  - Toggle No Save')
     print('    End - Exit')
-#    print('    PgDn - not implemented yet')
     
 def checkWindow():
     print('[*] Searching GTA V...')
 
     while True:
         hwnd = find_window("Grand Theft Auto V")
-        
         if hwnd:
             print('[*] GTA V Detected!')
             print('=============================================')
@@ -106,35 +107,33 @@ def cayoFingerprint(bbox):
 def casinoFingerprint(bbox):
     thread = Thread(target=casinofingerprint.main, args=(bbox,))
     thread.start()
-    
-def casinoKeypad(bbox):
-    thread = Thread(target=casinokeypad.main, args=(bbox,))
-    thread.start()
 
+
+def noSaveToggle():
+    thread = Thread(target=nosave.toggle_firewall_rule)
+    thread.start()
+    
+    
 def shutdown():
+    nosave.delete_firewall_rule()
     sys.exit()
 
  
-
 def main():
-    ensure_elevated_console()
-    nosave.init()
+    ensureRunningAsAdminOrExit()
     print_banner()
     printCredits()
     printHotkeys()
 
     bbox = checkWindow()
     if bbox:
-        with pynput.keyboard.GlobalHotKeys({
-            '<F5>': lambda: casinoKeypad(bbox),
+            with pynput.keyboard.GlobalHotKeys({
             '<F6>': lambda: casinoFingerprint(bbox),
             '<F7>': lambda: cayoFingerprint(bbox),
-            '<F8>': lambda: nosave.toggle_firewall_rule(),
+            '<F8>': lambda: noSaveToggle(),
             '<end>': lambda: shutdown(),
-            #'<page_down>': lambda: notImplemented(),
               }) as h:
-            
-            h.join()
+              h.join()
 
 if __name__ == "__main__":
     ctypes.windll.user32.SetProcessDPIAware()

@@ -91,8 +91,6 @@ def main(bbox):
     im.close()
 
     moves = find_shortest_solution(togo)
-
-    print('-', moves)
     for key in moves:
             keyboard.press(key)
             time.sleep(0.05)

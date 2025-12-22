@@ -4,7 +4,17 @@ A tool to assist with GTA V Cayo Perico fingerprint solving, Diamond Casino fing
 
 Download from here → [v1.1.1 Release](https://github.com/Abosmra/Crest-Companion-Tool/releases/download/v1.1.1/Crest.Companion.exe)
 
-**Setup**
+## Table of Contents
+
+- [Setup](#setup)
+- [Compile the code yourself](#compile-the-code-yourself)
+- [Run the app](#run-the-app)
+- [Tested 16:9 resolutions](#tested-16-9-resolutions)
+- [How to use the fingerprint helpers](#how-to-use-the-fingerprint-helpers)
+- [How to use No Save to replay heists](#how-to-use-no-save-to-replay-heists)
+- [Special thanks](#special-thanks)
+
+## Setup
 
 ```bash
 python -m venv .venv
@@ -12,12 +22,12 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-**Compile the code yourself**
+## Compile the code yourself
 ```bash
 pyinstaller --onefile --uac-admin --icon=icon.ico --name "Crest Companion" --add-data "assets;assets" main.py
 ```
 
-**Run the app**
+## Run the app
 
 - Launch GTA V and ensure the game window is visible (windowed or borderless works best).
 -- Hotkeys (while the app is running):
@@ -26,13 +36,14 @@ pyinstaller --onefile --uac-admin --icon=icon.ico --name "Crest Companion" --add
   - **F8**: Toggle No Save
   - **End**: Exit
 
+## Tested 16:9 resolutions
+
 - **Note:** The tool currently only works on 16:9 resolutions.
 - **Important:** When running, make sure the tool's terminal window does not cover or overlap the game window.
 
 - **Tested 16:9 resolutions:** 1600x900, 1920x1080, 2560x1440.
 
-
-**How to use the fingerprint helpers**
+## How to use the fingerprint helpers
 
 Both helpers need to be positioned at the starting point of the hack. In short: when you start hacking, don't move the selector — then press the helper hotkey for each fingerprint.
 
@@ -49,9 +60,7 @@ Both helpers need to be positioned at the starting point of the hack. In short: 
 - Test the helper once before a critical heist to confirm it works on your setup. If it works once it should keep working unless you change system configuration or aspect ratio.
 
 
-**How to use No Save to replay heists**
-
-How to use the nosave to replay heists:
+## How to use No Save to replay heists
 
 - Make sure you have launched the tool, you could do it during the heist, but just make sure to launch it before to be safe in case you forget.
 
@@ -71,6 +80,6 @@ How to use the nosave to replay heists:
 
 
 
-**Special thanks**
+## Special thanks
 
 Special thanks to [RedHeadEmile](https://github.com/RedHeadEmile) and [JU5TDIE](https://github.com/JU5TDIE).

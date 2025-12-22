@@ -31,6 +31,24 @@ pyinstaller --onefile --uac-admin --icon=icon.ico --name "Crest Companion" --add
 
 - **Tested 16:9 resolutions:** 1600x900, 1920x1080, 2560x1440.
 
+
+**How to use the fingerprint helpers**
+
+Both helpers need to be positioned at the starting point of the hack. In short: when you start hacking, don't move the selector — then press the helper hotkey for each fingerprint.
+
+- Make sure you have launched the tool before you begin the hack.
+
+- Position the selector/cursor at the exact starting point of the fingerprint hack and leave it there — do not move the selector during the hack.
+
+- Start the hack and, when required, press the appropriate helper hotkey:
+  - **F6**: Casino fingerprint helper
+  - **F7**: Cayo fingerprint helper
+
+- Press the helper hotkey for each fingerprint as it appears. The helper reads from the fixed selector position, so moving it will cause incorrect results.
+
+- Test the helper once before a critical heist to confirm it works on your setup. If it works once it should keep working unless you change system configuration or aspect ratio.
+
+
 **How to use No Save to replay heists**
 
 How to use the nosave to replay heists:
@@ -50,6 +68,7 @@ How to use the nosave to replay heists:
 - After you've disabled nosave, you can connect back into a GTA Online session and after joining back you should have your money and your heist preps should still be active.
 
 - DO NOT ACCEPT JOIN INVITES OR OPEN THE ROCKSTAR GAMES LAUNCHER MENU (HOME BUTTON), WHILE IN STORY MODE AFTER DISABLING NOSAVE, AS THAT WILL FORCE SAVE YOUR GAME! ONLY JOIN A LOBBY FROM THE PAUSE MENU, PREFERABLY AN INVITE ONLY LOBBY!
+
 
 
 **Special thanks**

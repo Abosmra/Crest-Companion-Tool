@@ -24,24 +24,31 @@ pip install -r requirements.txt
 
 ## Compile the code yourself
 ```bash
-pyinstaller --onefile --uac-admin --icon=icon.ico --name "Crest Companion" --add-data "assets;assets" main.py
+pyinstaller main.py `
+  --onefile `
+  --uac-admin `
+  --icon=icon.ico `
+  --name "Crest Companion" `
+  --add-data "assets;assets" `
+  --add-data ".venv\Lib\site-packages\PyQt6\Qt6\plugins\platforms;PyQt6/Qt6/plugins/platforms"
 ```
 
-## Run the app
+## Tested resolutions (16:9)
 
-- Launch GTA V and ensure the game window is visible (windowed or borderless works best).
--- Hotkeys (while the app is running):
-  - **F6**: Casino fingerprint helper
-  - **F7**: Cayo fingerprint helper
-  - **F8**: Toggle No Save
-  - **End**: Exit
+- Supported aspect ratio: **16:9 only**. The tool was validated on the following resolutions:
+  - 1600×900
+  - 1920×1080 (Full HD)
+  - 2560×1440 (QHD)
 
-## Tested 16:9 resolutions
+ - Recommended setup:
+  - Run GTA V in **fullscreen**, **borderless fullscreen**, or **windowed** (borderless window preferred).
+  - Set Windows display scaling to **100%** (DPI scaling can shift coordinates and break helpers).
+  - Keep the tool's terminal window off the game display (use a second monitor, or minimize it).
 
-- **Note:** The tool currently only works on 16:9 resolutions.
-- **Important:** When running, make sure the tool's terminal window does not cover or overlap the game window.
-
-- **Tested 16:9 resolutions:** 1600x900, 1920x1080, 2560x1440.
+- If your display is not 16:9 the helpers may be inaccurate. To troubleshoot:
+  - Confirm GTA's in-game resolution matches one of the tested values.
+  - Confirm Windows scaling is 100% and that the game window is not overlapped by other windows.
+  - If problems persist, try running the tool on a 16:9 display or report the issue with your resolution and scaling details.
 
 ## How to use the fingerprint helpers
 
@@ -65,6 +72,8 @@ Both helpers need to be positioned at the starting point of the hack. In short: 
 - Make sure you have launched the tool, you could do it during the heist, but just make sure to launch it before to be safe in case you forget.
 
 - Now just simply play the heist like you normally do. Of course make sure you have tested the tool before you start your heist. You don't have to test it every single time you start a heist, if it works one time it should work just fine in the future unless you install antivirus software or do other changes.
+
+- When you toggle No Save with `F8` you should see a small HUD banner in the top-right of your screen indicating the state: `No Save ON` (green) when enabled and `No Save OFF` (red) when disabled. If you don't see the banner, ensure the tool's dependencies are installed and that overlays are not blocked by other software.
 
 - Whenever you reach the end of the heist, make sure you activate nosave with F8 at least 10-20 seconds before making it to the heist ending.
 

@@ -5,6 +5,12 @@ import traceback
 import signal
 import os
 from pathlib import Path
+from colorama import Fore, Style
+try:
+    from . import overlay
+except Exception:
+    # overlay is optional; failures will be ignored so nosave still works
+    overlay = None
 
 # Simple firewall blocker helper
 RULE_NAME = "fuckRockstar"
@@ -33,7 +39,12 @@ def add_firewall_rule() -> None:
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
-        print(f"[*] No Save ON")
+        print(f"[*] No Save {Fore.LIGHTGREEN_EX}ON{Style.RESET_ALL}")
+        try:
+            if overlay:
+                overlay.show_on()
+        except Exception:
+            pass
         try:
             play_sound('ON.wav')
         except Exception:
@@ -59,7 +70,12 @@ def delete_firewall_rule() -> None:
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
-        print("[*] No Save OFF")
+        print(f"[*] No Save {Fore.LIGHTRED_EX}OFF{Style.RESET_ALL}")
+        try:
+            if overlay:
+                overlay.show_off()
+        except Exception:
+            pass
         try:
             play_sound('OFF.wav')
         except Exception:
@@ -97,7 +113,6 @@ def toggle_firewall_rule() -> None:
 
 def play_sound(filename: str) -> None:
 
-    # Support running from source and from a PyInstaller onefile bundle.
     base_dir = Path(getattr(sys, '_MEIPASS', Path(__file__).resolve().parents[1]))
     sound_path = base_dir / 'assets' / filename
     if not sound_path.exists():

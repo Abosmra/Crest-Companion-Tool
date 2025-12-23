@@ -5,3 +5,5 @@ keyboard
 pynput
 pywin32
 pyinstaller
+colorama
+PyQt6

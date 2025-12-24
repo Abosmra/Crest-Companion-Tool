@@ -92,3 +92,6 @@ Both helpers need to be positioned at the starting point of the hack. In short: 
 ## Special thanks
 
 Special thanks to [RedHeadEmile](https://github.com/RedHeadEmile) and [JU5TDIE](https://github.com/JU5TDIE).
+
+## Disclaimer
+For educational purposes only. The author/s are not responsible for any consequences including but not limited to account bans, data loss, or violations of terms of service.

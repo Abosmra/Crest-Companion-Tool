@@ -1,8 +1,6 @@
 import sys
 import subprocess
-import atexit
 import traceback
-import signal
 import os
 from pathlib import Path
 from colorama import Fore, Style

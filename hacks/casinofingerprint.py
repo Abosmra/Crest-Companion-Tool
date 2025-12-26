@@ -2,7 +2,7 @@ import cv2
 import time
 import keyboard
 import numpy as np
-from PIL import Image, ImageGrab
+from PIL import ImageGrab
 from collections import deque, namedtuple
 
 tofind = (950, 155, 1335, 685)

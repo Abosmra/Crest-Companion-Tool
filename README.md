@@ -1,8 +1,8 @@
+# Download from here → [Latest Version](https://github.com/Abosmra/Crest-Companion-Tool/releases/download/v1.2.0/Crest.Companion.exe)  
+
 # Crest Companion GTA Tool
 
 A tool to assist with GTA V Cayo Perico fingerprint solving, Diamond Casino fingerprint solving and the No Save Heist replay glitch.
-
-Download from here → [Latest Release](https://github.com/Abosmra/Crest-Companion-Tool/releases/download/v1.2.0/Crest.Companion.exe)
 
 ## Table of Contents
 
@@ -92,3 +92,6 @@ Both helpers need to be positioned at the starting point of the hack. In short: 
 ## Special thanks
 
 Special thanks to [RedHeadEmile](https://github.com/RedHeadEmile) and [JU5TDIE](https://github.com/JU5TDIE).
+
+## Disclaimer
+For educational purposes only. The author/s are not responsible for any consequences including but not limited to account bans, data loss, or violations of terms of service.

@@ -9,6 +9,7 @@ from threading import Thread
 from hacks import cayofingerprint
 from hacks import casinofingerprint
 from hacks import nosave
+from hacks import jobwarp
 from colorama import init as colorama_init, Fore, Style
 colorama_init()
 
@@ -97,6 +98,7 @@ def print_fingerprint_visibility_notice():
 def printHotkeys():
     print(Style.BRIGHT + '[*] Hotkeys:' + Style.RESET_ALL)
     print('    ' + Fore.LIGHTYELLOW_EX + '[?] How to use tool - Shift+F5' + Style.RESET_ALL)
+    print('    F5  - Job warp helper')
     print('    F6  - Casino fingerprint helper')
     print('    F7  - Cayo fingerprint helper')
     print('    F8  - Toggle No Save')
@@ -120,6 +122,11 @@ def get_current_bbox():
     if hwnd:
         return get_window_rect(hwnd)
     return None
+  
+def jobWarp(bbox):
+    thread = Thread(target=jobwarp.main, args=(bbox,))
+    thread.start()
+  
 
 def cayoFingerprint(bbox):
     thread = Thread(target=cayofingerprint.main, args=(bbox,))
@@ -147,6 +154,7 @@ def main():
     printHotkeys()
 
     hotkeys = pynput.keyboard.GlobalHotKeys({
+        '<F5>': lambda: (lambda b: jobWarp(b) if b else print('[!] GTA V not found.'))(get_current_bbox()),
         '<F6>': lambda: (lambda b: casinoFingerprint(b) if b else print('[!] GTA V not found.'))(get_current_bbox()),
         '<F7>': lambda: (lambda b: cayoFingerprint(b) if b else print('[!] GTA V not found.'))(get_current_bbox()),
         '<shift>+<f5>': lambda: show_readme(),

@@ -28,7 +28,7 @@ pyinstaller main.py `
   --onefile `
   --uac-admin `
   --icon=icon.ico `
-  --name "Crest Companion" `
+  --name "Crest Tools" `
   --add-data "assets;assets" `
   --add-data ".venv\Lib\site-packages\PyQt6\Qt6\plugins\platforms;PyQt6/Qt6/plugins/platforms"
 ```

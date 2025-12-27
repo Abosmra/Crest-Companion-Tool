@@ -1,4 +1,4 @@
-# Download from here → [Latest Version](https://github.com/Abosmra/Crest-Companion-Tool/releases/download/v1.2.0/Crest.Companion.exe)  
+# Download from here → [Latest Version](https://github.com/Abosmra/Crest-Companion-Tool/releases/download/v1.3.0/Crest.Companion.exe)  
 
 # Crest Companion GTA Tool
 
@@ -50,6 +50,8 @@ pyinstaller main.py `
   - Confirm Windows scaling is 100% and that the game window is not overlapped by other windows.
   - If problems persist, try running the tool on a 16:9 display or report the issue with your resolution and scaling details.
 
+# How to use tool
+
 ## How to use the fingerprint helpers
 
 Both helpers need to be positioned at the starting point of the hack. In short: when you start hacking, don't move the selector — then press the helper hotkey for each fingerprint.
@@ -87,6 +89,12 @@ Both helpers need to be positioned at the starting point of the hack. In short: 
 
 - DO NOT ACCEPT JOIN INVITES OR OPEN THE ROCKSTAR GAMES LAUNCHER MENU (HOME BUTTON), WHILE IN STORY MODE AFTER DISABLING NOSAVE, AS THAT WILL FORCE SAVE YOUR GAME! ONLY JOIN A LOBBY FROM THE PAUSE MENU, PREFERABLY AN INVITE ONLY LOBBY!
 
+## How to use Job Warp
+
+- Make sure the tool is running while you're in an Online session.
+- Open the Pause Menu → Online → Options and set **Matchmaking** to **Closed**.
+- In the Map hover over the **Job**  you want to teleport to.
+- Press **F5** while the job is highlighted (make sure the start job option is visible in the bottom of the screen) to teleport to that job.
 
 
 ## Special thanks

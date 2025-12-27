@@ -1,4 +1,4 @@
-# Download from here → [Latest Version](https://github.com/Abosmra/Crest-Companion-Tool/releases/download/v1.3.0/Crest.Companion.exe)  
+# Download from here → [Latest Version](https://github.com/Abosmra/Crest-Companion-Tool/releases/download/v1.3.0/Crest.Tools.exe)  
 
 # Crest Companion GTA Tool
 

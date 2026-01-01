@@ -1,4 +1,5 @@
 # Download from here → [Latest Version](https://github.com/Abosmra/Crest-Companion-Tool/releases/download/v1.3.0/Crest.Tools.exe)  
+# Tool Showcase → [Youtube](https://youtu.be/L5VUl-sb1_g)
 
 # Crest Companion GTA Tool
 
@@ -6,13 +7,17 @@ A tool to assist with GTA V Cayo Perico fingerprint solving, Diamond Casino fing
 
 ## Table of Contents
 
-- [Setup](#setup)
-- [Compile the code yourself](#compile-the-code-yourself)
-- [Run the app](#run-the-app)
-- [Tested 16:9 resolutions](#tested-16-9-resolutions)
-- [How to use the fingerprint helpers](#how-to-use-the-fingerprint-helpers)
-- [How to use No Save to replay heists](#how-to-use-no-save-to-replay-heists)
-- [Special thanks](#special-thanks)
+* [Setup](#setup)
+* [Compile the code yourself](#compile-the-code-yourself)
+* [Tested resolutions (16:9)](#tested-resolutions-169)
+* [How to use the tool](#how-to-use-tool)
+
+  * [How to use the fingerprint helpers](#how-to-use-the-fingerprint-helpers)
+  * [How to use No Save to replay heists](#how-to-use-no-save-to-replay-heists)
+  * [How to use Job Warp](#how-to-use-job-warp)
+* [Special thanks](#special-thanks)
+* [Disclaimer](#disclaimer)
+
 
 ## Setup
 
